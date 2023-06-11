@@ -11,7 +11,7 @@ namespace WordLibTest
          */
         
 
-        //Test if the word is palindrom by matching with the expected result
+        //Test to reverse word and matching with the word in expectedResult
         [TestMethod]
         public void TestPalindrome_whenGivenAWord_returnsWordReversed()
         {
@@ -44,6 +44,7 @@ namespace WordLibTest
             Assert.AreEqual(palindrom, expectedResult);  
         }
 
+        //Checks if input is palindrom and returns false if it is not.
         [TestMethod]
         public void TestPalindrom_whenGivenAWord_returnsFalse_IfIsNotPalindrom()
         {
