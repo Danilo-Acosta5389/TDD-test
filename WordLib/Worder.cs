@@ -6,7 +6,10 @@
         public int CountLetters(string input)
         {
             char[] stringArray = input.ToCharArray();
-            return stringArray.Count();
+            if (input == "")
+                throw new ArgumentException("Please input word");
+            else
+                return stringArray.Count();
         }
 
         public bool IsPalindrome(string input)
@@ -14,16 +17,22 @@
             char[] stringArray = input.ToCharArray();
             Array.Reverse(stringArray);
             string reversedStr = new string(stringArray);
-            return input == reversedStr ? true : false;
+
+            if (input == "") 
+                throw new ArgumentException("Please input word");
+            else 
+                return input == reversedStr ? true : false;
         }
 
         public string Palindrome(string input)
         {
-            //throw new NotImplementedException();
             char[] stringArray = input.ToCharArray();
             Array.Reverse(stringArray);
             string reversedStr = new string(stringArray);
-            return reversedStr;
+            if (input == "")
+                throw new ArgumentException("Please input word");
+            else 
+                return reversedStr;
         }
     }
 }

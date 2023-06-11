@@ -64,9 +64,10 @@ namespace WordLibTest
         public void CountLettersInWord() 
         {
             Worder worder = new Worder();
-            string input = "Kalle";
+            string input = "kalle";
             int count = worder.CountLetters(input);
-            Assert.IsTrue(count > 0);
+            int expectedResult = 10;
+            Assert.IsTrue(count == expectedResult);
         }
     }
 }
