@@ -11,7 +11,7 @@ namespace WordLibTest
          */
         
 
-        //Test to reverse word and matching with the word in expectedResult
+        //Tests if reversed word matches with the word in expectedResult
         [TestMethod]
         public void TestPalindrome_whenGivenAWord_returnsWordReversed()
         {
@@ -28,7 +28,7 @@ namespace WordLibTest
 
         }
 
-        //Checks if input is palindrom and returns true if it is.
+        //Tests if input is palindrom and returns true if it is.
         [TestMethod]
         public void TestPalindrom_whenGivenAWord_returnsTrue_IfIsPalindrom()
         {
@@ -44,7 +44,7 @@ namespace WordLibTest
             Assert.AreEqual(palindrom, expectedResult);  
         }
 
-        //Checks if input is palindrom and returns false if it is not.
+        //Tests if input is palindrome and returns false if it is not.
         [TestMethod]
         public void TestPalindrom_whenGivenAWord_returnsFalse_IfIsNotPalindrom()
         {
@@ -66,8 +66,8 @@ namespace WordLibTest
             Worder worder = new Worder();
             string input = "kalle";
             int count = worder.CountLetters(input);
-            int expectedResult = 10;
-            Assert.IsTrue(count == expectedResult);
+            int expectedResult = 5;
+            Assert.IsTrue(count == expectedResult, $"Word is {count} letters long");
         }
     }
 }
